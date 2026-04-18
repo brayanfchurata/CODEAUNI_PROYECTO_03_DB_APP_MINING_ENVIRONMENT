@@ -5,20 +5,16 @@ QMainWindow, QWidget {
     font-size: 12px;
 }
 
-QFrame#kpiCard,
-QFrame#chartCard,
-QFrame#panelCard,
 QFrame#topBar,
 QFrame#connectionCard,
-QFrame#miniInsightCard,
-QWidget#sidebar {
+QFrame#sidebar {
     background-color: #111827;
     border: 1px solid #1f2937;
     border-radius: 18px;
 }
 
 QLabel#topBarTitle {
-    font-size: 26px;
+    font-size: 28px;
     font-weight: 800;
     color: #f8fafc;
 }
@@ -26,6 +22,12 @@ QLabel#topBarTitle {
 QLabel#topBarSubtitle {
     font-size: 13px;
     color: #94a3b8;
+}
+
+QLabel#topBarTag {
+    font-size: 12px;
+    color: #60a5fa;
+    font-weight: 700;
 }
 
 QLabel#connectionTitle {
@@ -40,6 +42,28 @@ QLabel#sidebarTitle {
     color: #94a3b8;
 }
 
+QPushButton#navButton {
+    background-color: #1f2937;
+    color: #e5e7eb;
+    border: 1px solid #374151;
+    border-radius: 12px;
+    padding: 10px 14px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+QPushButton#navButton:hover {
+    background-color: #2563eb;
+    color: white;
+}
+
+QPushButton#navButton:checked {
+    background-color: #38bdf8;
+    color: #0f172a;
+    font-weight: 800;
+}
+
 QPushButton {
     background-color: #2563eb;
     color: white;
@@ -51,15 +75,6 @@ QPushButton {
 
 QPushButton:hover {
     background-color: #1d4ed8;
-}
-
-QPushButton:checked {
-    background-color: #1e40af;
-    color: white;
-}
-
-QPushButton:disabled {
-    background-color: #475569;
 }
 
 QLineEdit, QTextEdit, QComboBox, QTableWidget {
@@ -83,66 +98,16 @@ QTableWidget {
     selection-background-color: #1d4ed8;
 }
 
-QGroupBox {
-    border: 1px solid #334155;
-    border-radius: 16px;
-    margin-top: 10px;
-    padding-top: 12px;
-    font-weight: 700;
+QMenuBar {
+    background-color: #0b1220;
+    color: #e5e7eb;
 }
 
-QGroupBox::title {
-    left: 12px;
-    padding: 0 6px;
+QMenuBar::item:selected {
+    background-color: #1f2937;
 }
 
-QLabel#kpiTitle {
-    font-size: 12px;
+QStatusBar {
+    background-color: #0b1220;
     color: #94a3b8;
-    font-weight: 700;
-}
-
-QLabel#kpiValue {
-    font-size: 32px;
-    font-weight: 800;
-    color: #f8fafc;
-}
-
-QLabel#kpiFooter {
-    font-size: 11px;
-    color: #64748b;
-}
-
-QLabel#panelTitle {
-    font-size: 16px;
-    font-weight: 800;
-    color: #f8fafc;
-}
-
-QLabel#panelSubtitle {
-    font-size: 11px;
-    color: #94a3b8;
-}
-
-QLabel#pageTitle {
-    font-size: 22px;
-    font-weight: 800;
-    color: #f8fafc;
-}
-
-QLabel#pageSubtitle {
-    font-size: 12px;
-    color: #94a3b8;
-}
-
-QLabel#miniInsightTitle {
-    font-size: 12px;
-    color: #94a3b8;
-    font-weight: 700;
-}
-
-QLabel#miniInsightValue {
-    font-size: 14px;
-    color: #f8fafc;
-    font-weight: 700;
 }
