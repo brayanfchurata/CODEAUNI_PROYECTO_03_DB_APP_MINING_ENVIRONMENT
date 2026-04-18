@@ -5,37 +5,34 @@ from PySide6.QtWidgets import QFrame, QLabel, QVBoxLayout
 class KpiCard(QFrame):
     def __init__(self, title: str, accent_color: str = "#2563eb"):
         super().__init__()
-
         self.setObjectName("kpiCard")
         self.setStyleSheet(
             f"""
             QFrame#kpiCard {{
                 background-color: #111827;
-                border: 1px solid #334155;
+                border: 1px solid #1f2937;
                 border-left: 5px solid {accent_color};
-                border-radius: 14px;
+                border-radius: 18px;
             }}
             """
         )
 
         self.title_label = QLabel(title)
-        self.title_label.setStyleSheet(
-            "font-size: 12px; color: #94a3b8; font-weight: 700;"
-        )
+        self.title_label.setObjectName("kpiTitle")
+        self.title_label.setWordWrap(True)
 
         self.value_label = QLabel("--")
-        self.value_label.setAlignment(Qt.AlignCenter)
-        self.value_label.setStyleSheet(
-            "font-size: 28px; font-weight: 800; color: #f8fafc; padding: 10px;"
-        )
+        self.value_label.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
+        self.value_label.setObjectName("kpiValue")
 
         self.footer_label = QLabel("Indicador actualizado")
-        self.footer_label.setStyleSheet(
-            "font-size: 11px; color: #64748b;"
-        )
+        self.footer_label.setObjectName("kpiFooter")
 
         layout = QVBoxLayout()
+        layout.setContentsMargins(18, 16, 18, 16)
+        layout.setSpacing(8)
         layout.addWidget(self.title_label)
+        layout.addStretch()
         layout.addWidget(self.value_label)
         layout.addWidget(self.footer_label)
         self.setLayout(layout)

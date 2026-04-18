@@ -1,5 +1,6 @@
 from PySide6.QtWidgets import (
     QFileDialog,
+    QComboBox,
     QFormLayout,
     QHBoxLayout,
     QLabel,
@@ -8,7 +9,6 @@ from PySide6.QtWidgets import (
     QPushButton,
     QVBoxLayout,
     QWidget,
-    QComboBox,
 )
 
 from services.import_service import ImportService
@@ -25,14 +25,14 @@ class ImportPage(QWidget):
         self.file_input.setReadOnly(True)
 
         self.browse_button = QPushButton("Seleccionar CSV")
-        self.table_combo = QComboBox()
-        self.table_combo.addItems(self.import_service.get_supported_tables())
-
         self.preview_button = QPushButton("Vista previa")
         self.import_button = QPushButton("Importar a SQL Server")
 
+        self.table_combo = QComboBox()
+        self.table_combo.addItems(self.import_service.get_supported_tables())
+
         self.info_label = QLabel(
-            "Selecciona un archivo CSV, revisa la vista previa y luego impórtalo a la tabla destino."
+            "Selecciona un CSV, revisa la vista previa y luego impórtalo a la tabla elegida."
         )
         self.info_label.setStyleSheet("color: #94a3b8;")
 

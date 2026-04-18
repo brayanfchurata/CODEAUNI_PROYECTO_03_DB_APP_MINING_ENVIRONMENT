@@ -1,21 +1,43 @@
 QMainWindow, QWidget {
-    background-color: #0f172a;
-    color: #e2e8f0;
+    background-color: #0b1220;
+    color: #e5e7eb;
     font-family: Segoe UI;
     font-size: 12px;
 }
 
-QGroupBox {
-    border: 1px solid #334155;
-    border-radius: 14px;
-    margin-top: 10px;
-    padding-top: 12px;
-    font-weight: 700;
+QFrame#kpiCard,
+QFrame#chartCard,
+QFrame#panelCard,
+QFrame#topBar,
+QFrame#connectionCard,
+QFrame#miniInsightCard,
+QWidget#sidebar {
+    background-color: #111827;
+    border: 1px solid #1f2937;
+    border-radius: 18px;
 }
 
-QGroupBox::title {
-    left: 12px;
-    padding: 0 6px;
+QLabel#topBarTitle {
+    font-size: 26px;
+    font-weight: 800;
+    color: #f8fafc;
+}
+
+QLabel#topBarSubtitle {
+    font-size: 13px;
+    color: #94a3b8;
+}
+
+QLabel#connectionTitle {
+    font-size: 15px;
+    font-weight: 700;
+    color: #f8fafc;
+}
+
+QLabel#sidebarTitle {
+    font-size: 14px;
+    font-weight: 700;
+    color: #94a3b8;
 }
 
 QPushButton {
@@ -31,12 +53,17 @@ QPushButton:hover {
     background-color: #1d4ed8;
 }
 
+QPushButton:checked {
+    background-color: #1e40af;
+    color: white;
+}
+
 QPushButton:disabled {
     background-color: #475569;
 }
 
 QLineEdit, QTextEdit, QComboBox, QTableWidget {
-    background-color: #111827;
+    background-color: #0f172a;
     border: 1px solid #334155;
     border-radius: 10px;
     padding: 6px;
@@ -47,24 +74,75 @@ QHeaderView::section {
     background-color: #1e293b;
     color: #e2e8f0;
     border: 1px solid #334155;
-    padding: 6px;
+    padding: 8px;
+    font-weight: 700;
 }
 
-QTabWidget::pane {
+QTableWidget {
+    gridline-color: #334155;
+    selection-background-color: #1d4ed8;
+}
+
+QGroupBox {
     border: 1px solid #334155;
-    border-radius: 14px;
+    border-radius: 16px;
+    margin-top: 10px;
+    padding-top: 12px;
+    font-weight: 700;
 }
 
-QTabBar::tab {
-    background: #111827;
-    color: #cbd5e1;
-    padding: 10px 18px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    margin-right: 4px;
+QGroupBox::title {
+    left: 12px;
+    padding: 0 6px;
 }
 
-QTabBar::tab:selected {
-    background: #2563eb;
-    color: white;
+QLabel#kpiTitle {
+    font-size: 12px;
+    color: #94a3b8;
+    font-weight: 700;
+}
+
+QLabel#kpiValue {
+    font-size: 32px;
+    font-weight: 800;
+    color: #f8fafc;
+}
+
+QLabel#kpiFooter {
+    font-size: 11px;
+    color: #64748b;
+}
+
+QLabel#panelTitle {
+    font-size: 16px;
+    font-weight: 800;
+    color: #f8fafc;
+}
+
+QLabel#panelSubtitle {
+    font-size: 11px;
+    color: #94a3b8;
+}
+
+QLabel#pageTitle {
+    font-size: 22px;
+    font-weight: 800;
+    color: #f8fafc;
+}
+
+QLabel#pageSubtitle {
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+QLabel#miniInsightTitle {
+    font-size: 12px;
+    color: #94a3b8;
+    font-weight: 700;
+}
+
+QLabel#miniInsightValue {
+    font-size: 14px;
+    color: #f8fafc;
+    font-weight: 700;
 }

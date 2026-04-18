@@ -15,7 +15,7 @@ class DatabaseManager:
         if self.connection is None:
             self.connection = pyodbc.connect(
                 self.config.connection_string(),
-                timeout=5
+                timeout=5,
             )
         return self.connection
 
