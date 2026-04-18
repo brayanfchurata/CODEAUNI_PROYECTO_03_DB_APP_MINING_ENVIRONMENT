@@ -1,0 +1,4 @@
+fecha,proceso,toneladas_procesadas,pureza_inicial_pct,pureza_final_pct,tiempo_refinacion_hrs,consumo_electrico_kwh,costo_total_usd
+2024-03-01,Electrorefinación,3200,98.5,99.9,48,5000,15000
+2024-03-04,Refinación química,3100,98,99.5,36,4500,14000
+2024-03-07,Fundición adicional,3000,97.8,99,24,4000,13000

@@ -1,0 +1,16 @@
+id_proceso,proceso,tipo_proceso
+P001,Trituración,Preparación
+P002,Molienda,Extracción
+P003,Clasificación,Preparación
+P004,Flotación,Preparación
+P005,Separación magnética,Preparación
+P006,Gravitacional,Preparación
+P007,Fundición,Extracción
+P008,Tostación,Extracción
+P009,Lixiviación,Extracción
+P010,Precipitación,Extracción
+P011,Electrólisis,Extracción
+P012,Biolixiviación,Extracción
+P013,Electrorefinación,Refinación
+P014,Refinación química,Refinación
+P015,Fundición adicional,Refinación
